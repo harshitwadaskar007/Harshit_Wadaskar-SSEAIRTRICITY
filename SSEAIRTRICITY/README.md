@@ -142,11 +142,3 @@ The report also includes screenshots of the test runs for each step, which can b
 ## Conclusion
 
 This automation project has successfully tested the "Home Appliances Cost to Use" feature of the Citizens Advice website, covering the acceptance criteria mentioned in the user story. The integration with the Azure DevOps CI/CD pipeline and the use of an HTML report for test results can help streamline the build and deployment processes and provide a comprehensive overview of the test results.
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
