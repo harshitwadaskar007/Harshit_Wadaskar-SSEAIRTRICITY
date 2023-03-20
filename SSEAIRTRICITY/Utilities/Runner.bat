@@ -1,0 +1,1 @@
+dotnet test "../bin/Debug/net5.0/NHSx.Web.Framework.dll" --filter TestCategory=Negative

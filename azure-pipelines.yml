@@ -1,0 +1,37 @@
+parameters:
+
+- name: SelectWebModules
+  displayName: "Web"
+  type: boolean
+  default: true
+
+variables:
+    finalapitags: ${{ parameters.SelectWebModules }}
+
+trigger: none
+
+stages:
+- stage: Test
+  pool: 
+      vmImage: windows-latest 
+
+  jobs:
+  - job: 
+    displayName: "Execute Web Tests"
+    timeoutInMinutes: 180
+    condition: ${{ parameters.SelectWeb }}
+    steps:
+      - task: DotNetCoreCLI@2
+        displayName: 'Execute Web Test'
+        inputs:
+          command: 'test'
+          projects: '$(Agent.BuildDirectory)/**/*SSEAIRTRICITY.csproj'
+          arguments: '--filter TestCategory=${{ parameters.SelectWebModules }} --logger "console;verbosity=detailed"'        
+          
+      - task: PublishBuildArtifacts@1
+        displayName: "Publishing Web Reports"
+        condition: always()
+        inputs:
+          PathtoPublish: '$(Build.SourcesDirectory)/SSEAIRTRICITY/Report/'
+          ArtifactName: 'SelectWebModules'
+          publishLocation: 'Container'
