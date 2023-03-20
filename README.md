@@ -1,8 +1,9 @@
 ﻿
 # SSE Airtricity
-
+---
 <img src="https://user-images.githubusercontent.com/50833271/226240958-3b55451a-5fd8-49e8-a199-727b29b29f15.png" align="right" height="200" style="float:right; height:200px;">
 
+## Technical exercise: Home Appliances cost to use.
 This project contains the automation framework for testing the home appliances cost estimator on the Citizens Advice website. The purpose of this project is to verify the functionality of the home appliances cost estimator for residents of England, Scotland, and Wales, as well as the error message displayed for residents of Northern Ireland.
 
 ## User Story
@@ -142,4 +143,3 @@ The report also includes screenshots of the test runs for each step, which can b
 ## Conclusion
 
 This automation project has successfully tested the "Home Appliances Cost to Use" feature of the Citizens Advice website, covering the acceptance criteria mentioned in the user story. The integration with the Azure DevOps CI/CD pipeline and the use of an HTML report for test results can help streamline the build and deployment processes and provide a comprehensive overview of the test results.
-
